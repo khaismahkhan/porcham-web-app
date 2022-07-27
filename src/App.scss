@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.text {
+  color: red;
+}
+
+.vertical-line {
+  border: 1px solid black;
+  background: black;
+  width: 1px;
+}
+.horizontal-line {
+  width: 100%;
+  border: 1px solid black;
+  background: black;
+}
+.paper-root {
+  box-shadow: 0px 3px 12px #c8cfde99 !important;
+}
+.first-letter-capital {
+  text-transform: lowercase;
+  display: inline-block;
+}
+
+.first-letter-capital::first-line {
+  text-transform: capitalize !important;
+}
+.sticky {
+  position: sticky;
+  z-index: 999;
+  // background-color: #fcfcfc;
+}
+
+.top-51 {
+  top: 51px;
+}
+.top-53 {
+  top: 53px;
+}
+
+.w-5 {
+  width: 5% !important;
+}
+.w-7 {
+  width: 7% !important;
+}
+.w-8 {
+  width: 8% !important;
+}
+.w-10 {
+  width: 10% !important;
+}
+.w-12 {
+  width: 12% !important;
+}
+.w-13 {
+  width: 13% !important;
+}
+.w-15 {
+  width: 15% !important;
+}
+.w-16 {
+  width: 16% !important;
+}
+.w-18 {
+  width: 18% !important;
+}
+.w-20 {
+  width: 20% !important;
+}
+
+.w-23 {
+  width: 23% !important;
+}
+.w-25 {
+  width: 25% !important;
+}
+.w-30 {
+  width: 30% !important;
+}
+.w-33 {
+  width: 33% !important;
+}
+.w-34 {
+  width: 34% !important;
+}
+.w-35 {
+  width: 35% !important;
+}
+
+.w-36 {
+  width: 36% !important;
+}
+.w-37 {
+  width: 37% !important;
+}
+.w-40 {
+  width: 40% !important;
+}
+.w-45 {
+  width: 45% !important;
+}
+.w-49 {
+  width: 49% !important;
+}
+.w-55 {
+  width: 55% !important;
+}
+.w-60 {
+  width: 60% !important;
+}
+.w-65 {
+  width: 65% !important;
+}
+.w-70 {
+  width: 70% !important;
+}
+.w-80 {
+  width: 80% !important;
+}
+.w-85 {
+  width: 85% !important;
+}
+.w-87 {
+  width: 87% !important;
+}
+.w-90 {
+  width: 90% !important;
+}
+.w-95 {
+  width: 95% !important;
+}
+.w-98 {
+  width: 98% !important;
+}
+.border-light-grey {
+  border-color: #ececec;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-ellipsis-clamp-1 {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  // height: 30px;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-ellipsis-clamp-2 {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-ellipsis-clamp-3 {
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.width-max-content {
+  width: max-content !important;
+}
+.min-width-max-content {
+  min-width: max-content !important;
+}
+.animation-height-400 {
+  height: 400px;
+  -webkit-transition: height, 0.3s linear !important;
+  -moz-transition: height, 0.3s linear !important;
+  -ms-transition: height, 0.3s linear !important;
+  -o-transition: height, 0.3s linear !important;
+  transition: height, 0.3s linear !important;
+}
+.animation-height-0 {
+  height: 0px;
+  -webkit-transition: height, 0.3s linear !important;
+  -moz-transition: height, 0.3s linear !important;
+  -ms-transition: height, 0.3s linear !important;
+  -o-transition: height, 0.3s linear !important;
+  transition: height, 0.3s linear !important;
+}
+.animation-initial-cubic-bezier-transition {
+  transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1) !important;
+}
+.animation-transform-up-cubix-transition {
+  transform: translate3d(0, -30px, 0);
+}
+%animation-transform-up-cubix-transition {
+  // try to import like this  @import filepath and use @extent to refer in file
+  transform: translate3d(0, -30px, 0);
+}
+%animation-transform-scale {
+  transform: scale(1.2);
+}
