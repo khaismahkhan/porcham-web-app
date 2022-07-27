@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "CuppaJoe";
+  src: local("CuppaJoe"),
+    url("../../containers/main/material.theme/fonts/cuppajoe/CuppaJoe.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Ebrima";
+  src: local("Ebrima"),
+    url("../../containers/main/material.theme/fonts/Ebrima Font/ebrima.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Ebrima-Bold";
+  src: local("Ebrima"),
+    url("../../containers/main/material.theme/fonts/Ebrima Font/ebrima-bold.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Enter-The-Grid";
+  src: local("Enter-The-Grid"),
+    url("../../containers/main/material.theme/fonts/enter-the-grid/Enter-The-Grid.ttf")
+      format("truetype");
+}
+
 * {
   padding: 0;
   border: 0;
