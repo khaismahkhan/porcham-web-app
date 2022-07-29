@@ -1,4 +1,8 @@
-
+export const primaryColor = "#1C3664";
+export const gradientBlueColor =
+  "linear-gradient(111.84deg, #5B3BD0 7.29%, #280D61 94.24%)";
+export const SecondaryColor = "#D64795";
+export const greyColor = "#B9B9B9";
 
 export const materialThemeBase = {
   typography: {
@@ -20,10 +24,25 @@ export const materialThemeBase = {
       fontFamily: "Enter-The-Grid",
       fontSize: 18,
     },
-    subtitleE24:{
-        fontFamily: "Enter-The-Grid",
+    subtitleE24: {
+      fontFamily: "Enter-The-Grid",
       fontSize: 24,
-    }
+    },
   },
-
+  palette: {
+    primary: {
+      main: primaryColor,
+      extraLight: pink[200],
+      darkLight: "#701367",
+    },
+    secondary: {
+      main: SecondaryColor,
+    },
+    gradientBlueColor: {
+      main: gradientBlueColor,
+    },
+    greyColor: {
+      main: greyColor,
+    },
+  },
 };
