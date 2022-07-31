@@ -14,11 +14,14 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AdbIcon from "@mui/icons-material/Adb";
+import clsx from "clsx";
+import { IsMobileWidth } from "../../../components/utils/utils";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
+  const mobileWidth = IsMobileWidth();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -39,7 +42,13 @@ const Header = () => {
   return (
     <div className="w-100 bg-info">
       {/* for desktop */}
-      <div className="d-flex justify-content-between align-items-center w-100">
+      <div
+        className={clsx(
+          mobileWidth && "d-none",
+          !mobileWidth &&
+            "d-flex justify-content-between align-items-center w-100"
+        )}
+      >
         <div className="d-flex">
           {pages.map((page) => (
             <Button
@@ -104,8 +113,13 @@ const Header = () => {
         </div>
       </div>
       {/* for mobile */}
-      <div className="d-none justify-content-between align-items-center w-100">
-        <div>
+      <div
+        className={clsx(
+          mobileWidth && "d-flex justify-content-between align-items-center w-100",
+          !mobileWidth && "d-none"
+        )}
+      >
+        <div className="d-flex align-items-center">
           <Box>
             <IconButton
               size="large"
