@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Typography className="text-center text" variant="h5">Hello im ebrima</Typography>
       <Typography className="text-center text" variant="h3" color="secondary">Hello im ebrima bold</Typography>
       <Typography className="text-center text" variant="h6">Hello im cuppajoe</Typography>
