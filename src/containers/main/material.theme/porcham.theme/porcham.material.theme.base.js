@@ -32,7 +32,6 @@ export const materialThemeBase = {
   palette: {
     primary: {
       main: primaryColor,
-      extraLight: pink[200],
       darkLight: "#701367",
     },
     secondary: {
