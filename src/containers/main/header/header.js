@@ -6,10 +6,12 @@ import {
   Menu,
   Button,
   MenuItem,
+  Badge,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import clsx from "clsx";
 import { IsMobileWidth } from "../../../components/utils/utils";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const pages = ["HOME", "SHOP", "BLOG", "CONTACT", "TOOLS"];
 
@@ -51,13 +53,20 @@ const Header = () => {
             alt="header-logo"
           />
         </div>
-        <div className="w-100 d-flex justify-content-end">cart</div>
+        <div className="w-100 d-flex justify-content-end">
+          <IconButton aria-label="cart">
+            <Badge badgeContent={4} color="secondary">
+              <ShoppingCartIcon color="primary" />
+            </Badge>
+          </IconButton>
+           
+        </div>
       </div>
       {/* for mobile */}
       <div
         className={clsx(
           mobileWidth &&
-            "d-flex justify-content-between align-items-center w-100",
+            "d-flex justify-content-between align-items-center w-100 pe-2",
           !mobileWidth && "d-none"
         )}
       >
@@ -103,7 +112,14 @@ const Header = () => {
             />
           </div>
         </div>
-        <div>cart</div>
+        <div>
+          <IconButton aria-label="cart">
+            <Badge badgeContent={4} color="secondary">
+              <ShoppingCartIcon color="primary" />
+            </Badge>
+          </IconButton>
+         
+        </div>
       </div>
     </div>
   );
