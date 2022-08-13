@@ -21,7 +21,7 @@ export const materialThemeBase = {
       fontSize: 18,
     },
     subtitle: {
-      fontFamily: "Enter-The-Grid",
+      fontFamily: "CuppaJoe",
       fontSize: 18,
     },
     subtitleE24: {
@@ -43,5 +43,6 @@ export const materialThemeBase = {
     greyColor: {
       main: greyColor,
     },
+    
   },
 };
