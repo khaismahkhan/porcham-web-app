@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import clsx from "clsx";
 import { IsMobileWidth } from "../../../components/utils/utils";
 
@@ -14,15 +14,17 @@ const Footer = () => {
           alt="header-logo"
         />
       </div>
-      <div className="d-flex w-100 flex-wrap pt-4 pb-3">
+      <div className="d-flex w-100 flex-wrap pt-4 pb-4">
         <div
           className={clsx(
-            "d-flex",
+            "d-flex flex-column align-items-start",
             !mobileWidth && "w-40",
             mobileWidth && "w-100"
           )}
         >
-          1
+          <Typography>About Us</Typography>
+          <Typography>Address</Typography>
+          <Typography>Phone#</Typography>
         </div>
         <div
           className={clsx(
@@ -32,9 +34,7 @@ const Footer = () => {
           )}
         >
           <Typography className="pb-2" variant="h6">Our Collections</Typography>
-          <Typography>
-            <a href="">data</a>
-          </Typography>
+          <Link href="" underline="hover">data</Link>
         </div>
         <div
           className={clsx(
@@ -44,10 +44,11 @@ const Footer = () => {
           )}
         >
           <Typography className="pb-2" variant="h6">Information</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+
         </div>
         <div
           className={clsx(
@@ -57,10 +58,10 @@ const Footer = () => {
           )}
         >
           <Typography className="pb-2" variant="h6">Helpful Links</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
         </div>
         <div
           className={clsx(
@@ -70,10 +71,11 @@ const Footer = () => {
           )}
         >
           <Typography className="pb-2" variant="h6">Connect With Us</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
-          <Typography>data</Typography>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+          <Link href="" underline="hover">data</Link>
+
         </div>
       </div>
     </div>
