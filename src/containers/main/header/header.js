@@ -12,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import clsx from "clsx";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import "./header.scss";
 
 const pages = ["HOME", "SHOP", "BLOG", "CONTACT", "TOOLS"];
 
@@ -35,25 +36,42 @@ const Header = () => {
     setAnchorEl(null);
   };
   return (
-    <div className="w-100 paper-root">
+    <div id="header" className="w-100 paper-root">
+      <div className="whatsapp">
+        <a href="https://wa.me/923352683699" target="_blank">
+          <img
+            style={{ height: "50px", width: "50px" }}
+            src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
+            alt="whatsapp-logo"
+          />
+        </a>
+      </div>
+      <div className="messenger">
+        <a href="https://m.me/porchamstore" target="_blank">
+          <img
+            style={{ height: "50px", width: "50px" }}
+            src={`${process.env.PUBLIC_URL}/assets/images/messenger.png`}
+            alt="messenger-logo"
+          />
+        </a>
+      </div>
       {/* for desktop */}
       <div
         className={clsx(
           mobileWidth && "d-none",
           !mobileWidth &&
-          "d-flex justify-content-between align-items-center w-100 p-2"
+            "d-flex justify-content-between align-items-center w-100 p-2"
         )}
       >
         <div className="w-100">
           <div className="d-flex">
             <Button
               id="basic-button"
-              aria-controls={open ? 'basic-menu' : undefined}
+              aria-controls={open ? "basic-menu" : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
+              aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
               onMouseOver={handleClick}
-
             >
               HOME
             </Button>
@@ -63,7 +81,7 @@ const Header = () => {
               open={open}
               onClose={handleClose}
               MenuListProps={{
-                'aria-labelledby': 'basic-button',
+                "aria-labelledby": "basic-button",
               }}
               className="w-100"
             >
@@ -88,14 +106,13 @@ const Header = () => {
               <ShoppingCartIcon color="primary" />
             </Badge>
           </IconButton>
-
         </div>
       </div>
       {/* for mobile */}
       <div
         className={clsx(
           mobileWidth &&
-          "d-flex justify-content-between align-items-center w-100 pe-2",
+            "d-flex justify-content-between align-items-center w-100 pe-2",
           !mobileWidth && "d-none"
         )}
       >
@@ -147,7 +164,6 @@ const Header = () => {
               <ShoppingCartIcon color="primary" />
             </Badge>
           </IconButton>
-
         </div>
       </div>
     </div>
