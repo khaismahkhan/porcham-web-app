@@ -1,0 +1,18 @@
+#advertisment-panel-carousel {
+    .slick-next:before {
+        content: "" !important;
+    }
+    .slick-next {
+        right: 0px !important;
+    }
+    #arrow_icon_carousel1 {
+        font-size: 14px;
+    }
+    .carousel1 {
+        outline: none !important;
+        box-shadow: 0px 0px 3px #525252 !important;
+    }
+    .carousel1:hover {
+        background-color: rgb(252, 252, 252) !important;
+    }
+}

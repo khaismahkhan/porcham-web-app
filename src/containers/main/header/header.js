@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <div id="header" className="w-100 paper-root">
       <div className="whatsapp">
-        <a href="https://wa.me/923352683699" target="_blank">
+        <a href="https://wa.me/923142593164" target="_blank">
           <img
             style={{ height: "55px", width: "55px" }}
             src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
