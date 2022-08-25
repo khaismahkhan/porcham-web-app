@@ -40,7 +40,7 @@ const Header = () => {
       <div className="whatsapp">
         <a href="https://wa.me/923352683699" target="_blank">
           <img
-            style={{ height: "50px", width: "50px" }}
+            style={{ height: "55px", width: "55px" }}
             src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
             alt="whatsapp-logo"
           />
@@ -49,7 +49,7 @@ const Header = () => {
       <div className="messenger">
         <a href="https://m.me/porchamstore" target="_blank">
           <img
-            style={{ height: "50px", width: "50px" }}
+            style={{ height: "55px", width: "55px" }}
             src={`${process.env.PUBLIC_URL}/assets/images/messenger.png`}
             alt="messenger-logo"
           />
@@ -65,16 +65,18 @@ const Header = () => {
       >
         <div className="w-100">
           <div className="d-flex">
-            <Button
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-              onMouseOver={handleClick}
-            >
-              HOME
-            </Button>
+            {pages.map((page) => (
+              <Button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+                onMouseOver={handleClick}
+              >
+                {page}
+              </Button>
+            ))}
             <Menu
               id="basic-menu"
               anchorEl={anchorEl}
