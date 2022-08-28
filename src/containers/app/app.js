@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </ThemeProvider>
   );
 }
