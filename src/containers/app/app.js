@@ -11,11 +11,14 @@ function App() {
   return (
     <ThemeProvider theme={porchamTheme}>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
-      </Routes>
-      {/* <Footer /> */}
+      <div style={{ minHeight: "100vh" }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
+        </Routes>
+      </div>
+
+      <Footer />
     </ThemeProvider>
   );
 }

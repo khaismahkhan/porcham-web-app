@@ -6,7 +6,7 @@ import { IsMobileWidth } from "../../../components/utils/utils";
 const Footer = () => {
   const mobileWidth = IsMobileWidth();
   return (
-    <div className="paper-root w-100 ps-3 position-absolute bottom-0">
+    <div className="paper-root w-100 ps-3">
       <div className="w-100 pt-3">
         <img
           style={{ height: "60px", width: "230px" }}

@@ -6,10 +6,8 @@ import AdvertismentPanelCarousel from "../../../components/advertisment.panel.ca
 const Home = () => {
   return (
     <div className="w-100">
-      {/* <AdvertismentPanelCarousel/> */}
-      <div className="bg-dark">
-        <Button text="click me"/>
-      </div>
+      <AdvertismentPanelCarousel/>
+     
       {/* <Typography className="text-center text" variant="h5">Hello im ebrima</Typography>
       <Typography className="text-center text" variant="h3" color="secondary">Hello im ebrima bold</Typography>
       <Typography className="text-center text" variant="h6">Hello im cuppajoe</Typography>

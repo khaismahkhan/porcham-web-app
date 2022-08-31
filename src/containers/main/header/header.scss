@@ -1,13 +1,13 @@
 #header {
   .whatsapp {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 12px;
     cursor: pointer;
     z-index: 2;
   }
   .messenger {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 12px;
     cursor: pointer;
