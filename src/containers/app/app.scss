@@ -1,10 +1,4 @@
 @font-face {
-  font-family: "CuppaJoe";
-  src: local("CuppaJoe"),
-    url("../../containers/main/material.theme/fonts/cuppajoe/CuppaJoe.ttf")
-      format("truetype");
-}
-@font-face {
   font-family: "Ebrima";
   src: local("Ebrima"),
     url("../../containers/main/material.theme/fonts/Ebrima Font/ebrima.ttf")
@@ -16,10 +10,17 @@
     url("../../containers/main/material.theme/fonts/Ebrima Font/ebrima-bold.ttf")
       format("truetype");
 }
+
 @font-face {
-  font-family: "Enter-The-Grid";
-  src: local("Enter-The-Grid"),
-    url("../../containers/main/material.theme/fonts/enter-the-grid/Enter-The-Grid.ttf")
+  font-family: "Joined-Bold";
+  src: local("Joined-Bold"),
+    url("../../containers/main/material.theme/fonts/Dancing_Script/static/DancingScript-Bold.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: local("Comfortaa"),
+    url("../../containers/main/material.theme/fonts/Comfortaa/static/Comfortaa-Medium.ttf")
       format("truetype");
 }
 
@@ -33,7 +34,7 @@ a:link {
   text-decoration: none;
 }
 a:hover {
-  text-decoration:solid;
+  text-decoration: solid;
 }
 .vertical-line {
   border: 1px solid black;

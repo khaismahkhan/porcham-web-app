@@ -1,7 +1,9 @@
 import React from "react";
-import { Typography, Button, Box } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 import { IsMobileWidth } from "../utils/utils";
+// import { Button } from "../button/button";
 import clsx from "clsx";
+
 const AdvertismentPanel = (props) => {
   const {
     image,
@@ -36,19 +38,17 @@ const AdvertismentPanel = (props) => {
             : "100% 100%",
         backgroundRepeat: "no-repeat",
         height: bannerHeight ? bannerHeight : "80vh",
-        justifyContent: textAlignment ? textAlignment : "",
+        justifyContent: textAlignment ? textAlignment : "center",
       }}
     >
       <Box
-        className={clsx(!mobileWidth && "w-50", mobileWidth && "w-100")}
+        className={clsx(!mobileWidth && "w-30 bg-dark", mobileWidth && "w-100")}
         color="primary"
-        style={{ color: textColor ? textColor : "rgb(68 0 108)" }}
+        style={{ color: textColor ? textColor : "white" }}
       >
         <Typography
-          variant={clsx(!mobileWidth && "h5", mobileWidth && "h6")}
-          gutterBottom
-          component="div"
-          className="text-ellipsis-clamp-1 font-weight-bold text-uppercase h-auto"
+          variant={clsx(!mobileWidth && "h3Joined", mobileWidth && "h3Joined")}
+    
         >
           {titleHeading ? titleHeading : ""}
         </Typography>
@@ -68,17 +68,8 @@ const AdvertismentPanel = (props) => {
         >
           {description ? description : ""}
         </Typography>
-        <Typography>
-          <Button
-            variant={buttonTitle ? "contained" : ""}
-            className={clsx(
-              !mobileWidth && "font-weight-bold p-3 pl-5 pr-5 text-uppercase",
-              mobileWidth && "font-weight-bold p-2 pl-3 pr-3 text-uppercase"
-            )}
-          >
-            {buttonTitle ? buttonTitle : ""}
-          </Button>
-        </Typography>
+
+        {/* {buttonTitle ? <Button>hellow</Button>: null} */}
       </Box>
     </div>
   );

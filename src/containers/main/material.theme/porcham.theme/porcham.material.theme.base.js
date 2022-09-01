@@ -9,8 +9,12 @@ export const materialThemeBase = {
     // fontFamily: "Comfortaa",
     // fontFamily: ["Comfortaa"].join(","),
     h3: {
-      fontFamily: "CuppaJoe",
+      fontFamily: "Comfortaa",
       fontSize: 18,
+    },
+    h3Joined: {
+      fontFamily: "Joined-Bold",
+      fontSize: 36,
     },
     h5: {
       fontFamily: "Ebrima",
@@ -20,12 +24,20 @@ export const materialThemeBase = {
       fontFamily: "Ebrima-Bold",
       fontSize: 18,
     },
-    subtitle: {
-      fontFamily: "CuppaJoe",
-      fontSize: 18,
+    subtitle1: {
+      fontFamily: "Comfortaa",
+    },
+    subtitle2: {
+      fontFamily: "Comfortaa",
+    },
+    body1: {
+      fontFamily: "Comfortaa",
+    },
+    body2: {
+      fontFamily: "Comfortaa",
     },
     subtitleE24: {
-      fontFamily: "Enter-The-Grid",
+      fontFamily: "Ebrima",
       fontSize: 24,
     },
   },
@@ -43,6 +55,5 @@ export const materialThemeBase = {
     greyColor: {
       main: greyColor,
     },
-    
   },
 };
