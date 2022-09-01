@@ -36,7 +36,7 @@ const Header = () => {
     setAnchorEl(null);
   };
   return (
-    <div id="header" className="w-100 paper-root">
+    <div id="header" className="w-100 bg-dark">
       <div className="whatsapp">
         <a href="https://wa.me/923142593164" target="_blank">
           <img
@@ -60,7 +60,7 @@ const Header = () => {
         className={clsx(
           mobileWidth && "d-none",
           !mobileWidth &&
-            "d-flex justify-content-between align-items-center w-100 p-2"
+            "d-flex justify-content-between align-items-center w-100 p-2 paper-root"
         )}
       >
         <div className="w-100">
@@ -73,11 +73,12 @@ const Header = () => {
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
                 onMouseOver={handleClick}
+                className="text-white"
               >
                 {page}
               </Button>
             ))}
-            <Menu
+            {/* <Menu
               id="basic-menu"
               anchorEl={anchorEl}
               open={open}
@@ -92,7 +93,7 @@ const Header = () => {
               </MenuItem>
               <MenuItem onClick={handleClose}>My account</MenuItem>
               <MenuItem onClick={handleClose}>Logout</MenuItem>
-            </Menu>
+            </Menu> */}
           </div>
         </div>
         <div className="d-flex justify-content-center w-100">
@@ -104,8 +105,8 @@ const Header = () => {
         </div>
         <div className="w-100 d-flex justify-content-end">
           <IconButton aria-label="cart">
-            <Badge badgeContent={1} color="secondary">
-              <ShoppingCartIcon color="primary" />
+            <Badge badgeContent={1} color="primary">
+              <ShoppingCartIcon style={{color:'white'}} />
             </Badge>
           </IconButton>
         </div>
