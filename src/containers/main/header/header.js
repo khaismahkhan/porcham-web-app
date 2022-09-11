@@ -13,10 +13,13 @@ import clsx from "clsx";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.scss";
+import { useNavigate } from "react-router-dom";
 
-const pages = ["HOME", "SHOP", "BLOG", "CONTACT", "TOOLS"];
+const pages = ["SHOP", "BLOG", "CONTACT", "TOOLS"];
 
-const Header = () => {
+const Header = (props) => {
+  const navigate = useNavigate();
+
   const mobileWidth = IsMobileWidth();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -30,7 +33,8 @@ const Header = () => {
   };
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    // setAnchorEl(event.currentTarget);
+    navigate("/coming-soon");
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -65,6 +69,7 @@ const Header = () => {
       >
         <div className="w-100">
           <div className="d-flex">
+        <Button  className="text-white" onClick={() =>navigate("/") }>HOME</Button>
             {pages.map((page) => (
               <Button
                 id="basic-button"
@@ -72,7 +77,7 @@ const Header = () => {
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
-                onMouseOver={handleClick}
+                // onMouseOver={handleClick}
                 className="text-white"
               >
                 {page}
@@ -101,12 +106,13 @@ const Header = () => {
             style={{ height: "60px", width: "230px" }}
             src={`${process.env.PUBLIC_URL}/assets/images/header-logo.png`}
             alt="header-logo"
+            onClick={() => navigate("/")}
           />
         </div>
         <div className="w-100 d-flex justify-content-end">
           <IconButton aria-label="cart">
             <Badge badgeContent={1} color="primary">
-              <ShoppingCartIcon style={{color:'white'}} />
+              <ShoppingCartIcon style={{ color: "white" }} />
             </Badge>
           </IconButton>
         </div>
