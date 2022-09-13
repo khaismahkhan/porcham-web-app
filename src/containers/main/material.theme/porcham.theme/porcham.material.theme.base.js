@@ -8,16 +8,24 @@ export const materialThemeBase = {
   typography: {
     // fontFamily: "Comfortaa",
     // fontFamily: ["Comfortaa"].join(","),
+    h2: {
+      fontFamily: "Comfortaa",
+      fontSize: 36,
+    },
     h3: {
       fontFamily: "Comfortaa",
       fontSize: 18,
     },
+    h4: {
+      fontFamily: "Comfortaa",
+      fontSize: 24,
+    },
     h3Joined: {
       fontFamily: "Joined-Bold",
-      fontSize: 36,
+      fontSize: 42,
     },
     h5: {
-      fontFamily: "Ebrima",
+      fontFamily: "Comfortaa",
       fontSize: 18,
     },
     h6: {
@@ -26,6 +34,7 @@ export const materialThemeBase = {
     },
     subtitle1: {
       fontFamily: "Comfortaa",
+      fontSize:18
     },
     subtitle2: {
       fontFamily: "Comfortaa",
@@ -35,6 +44,15 @@ export const materialThemeBase = {
     },
     body2: {
       fontFamily: "Comfortaa",
+    },
+    joined: { fontFamily: "Joined-Bold", fontSize: 20 },
+    subtitle: {
+      fontFamily: "Comfortaa",
+      fontSize:11
+    },
+    body: {
+      fontFamily: "Comfortaa",
+      fontSize:9
     },
     subtitleE24: {
       fontFamily: "Ebrima",

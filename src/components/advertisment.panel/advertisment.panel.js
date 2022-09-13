@@ -37,31 +37,29 @@ const AdvertismentPanel = (props) => {
             ? `100% ${height}`
             : "100% 100%",
         backgroundRepeat: "no-repeat",
-        height: bannerHeight ? bannerHeight : "80vh",
+        height: bannerHeight ? bannerHeight : mobileWidth ? "30vh" : "80vh",
         justifyContent: textAlignment ? textAlignment : "center",
       }}
     >
       <Box
-        className={clsx(!mobileWidth && "w-30 bg-dark", mobileWidth && "w-100")}
+        className={clsx(!mobileWidth && "w-30", mobileWidth && "w-35")}
         color="primary"
         style={{ color: textColor ? textColor : "white" }}
       >
         <Typography
-          variant={clsx(!mobileWidth && "h3Joined", mobileWidth && "h3Joined")}
-    
+          variant={clsx(!mobileWidth && "h3Joined", mobileWidth && "joined")}
         >
           {titleHeading ? titleHeading : ""}
         </Typography>
         <Typography
-          variant={clsx(!mobileWidth && "h2", mobileWidth && "h4")}
+          variant={clsx(!mobileWidth && "h2", mobileWidth && "subtitle")}
           gutterBottom
-          component="div"
           className="text-ellipsis-clamp-3 font-weight-bolder text-capitalize"
         >
           {title ? title : ""}
         </Typography>
         <Typography
-          variant={clsx(!mobileWidth && "h5", mobileWidth && "h6")}
+          variant={clsx(!mobileWidth && "h5", mobileWidth && "body")}
           gutterBottom
           component="div"
           className="text-ellipsis-clamp-1 led font-weight-light h-auto"

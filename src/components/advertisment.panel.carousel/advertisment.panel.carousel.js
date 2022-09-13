@@ -27,8 +27,8 @@ const AdvertismentPanelCarousel = () => {
 
   return (
     <div id="advertisment-panel-carousel">
-      <div className="w-100" style={{ height: "30vh" }}>
-        <Slider {...settings} style={{ height: "30vh" }}>
+      <div className="w-100">
+        <Slider {...settings} >
           <div>
             <AdvertismentPanel
               image={`${process.env.PUBLIC_URL}/assets/images/1.jpg`}
