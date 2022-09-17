@@ -26,7 +26,7 @@ export const materialThemeBase = {
     },
     h5: {
       fontFamily: "Comfortaa",
-      fontSize: 18,
+      fontSize: 32,
     },
     h6: {
       fontFamily: "Ebrima-Bold",
@@ -34,7 +34,7 @@ export const materialThemeBase = {
     },
     subtitle1: {
       fontFamily: "Comfortaa",
-      fontSize:18
+      fontSize: 18,
     },
     subtitle2: {
       fontFamily: "Comfortaa",
@@ -48,15 +48,19 @@ export const materialThemeBase = {
     joined: { fontFamily: "Joined-Bold", fontSize: 20 },
     subtitle: {
       fontFamily: "Comfortaa",
-      fontSize:11
+      fontSize: 11,
     },
     body: {
       fontFamily: "Comfortaa",
-      fontSize:9
+      fontSize: 9,
     },
     subtitleE24: {
       fontFamily: "Ebrima",
       fontSize: 24,
+    },
+    caption: {
+      fontFamily: "Comfortaa",
+      fontSize: 14,
     },
   },
   palette: {

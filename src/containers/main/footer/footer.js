@@ -114,6 +114,11 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      <div className="w-100 text-center p-3 border-top">
+        <Typography variant="caption" className="text-theme">
+          © 2022 PORCHAM™, All Rights Reserved.
+        </Typography>
+      </div>
     </div>
   );
 };
