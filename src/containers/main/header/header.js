@@ -69,9 +69,12 @@ const Header = (props) => {
       >
         <div className="w-100">
           <div className="d-flex">
-        <Button  className="text-white" onClick={() =>navigate("/") }>HOME</Button>
-            {pages.map((page) => (
+            <Button className="text-white" onClick={() => navigate("/")}>
+              HOME
+            </Button>
+            {pages.map((page, index) => (
               <Button
+                key={index}
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
@@ -133,7 +136,7 @@ const Header = (props) => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              style={{ color: "white" }}
             >
               <MenuIcon />
             </IconButton>
@@ -152,8 +155,8 @@ const Header = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -169,8 +172,8 @@ const Header = (props) => {
         </div>
         <div>
           <IconButton aria-label="cart">
-            <Badge badgeContent={1} color="secondary">
-              <ShoppingCartIcon color="primary" />
+            <Badge badgeContent={1} color="primary">
+              <ShoppingCartIcon style={{ color: "white" }} />
             </Badge>
           </IconButton>
         </div>

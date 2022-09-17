@@ -38,6 +38,7 @@ export const materialThemeBase = {
     },
     subtitle2: {
       fontFamily: "Comfortaa",
+      fontSize: 16,
     },
     body1: {
       fontFamily: "Comfortaa",
