@@ -23,7 +23,7 @@ const Home = () => {
         </Typography>
         <div className="w-100 d-flex flex-wrap justify-content-center">
           {products.map((product, index) => (
-            <div className="m-3">
+            <div className="m-3" key={index}>
               <ProductCard />
             </div>
           ))}

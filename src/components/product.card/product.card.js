@@ -1,11 +1,37 @@
-import { Rating, Typography } from "@mui/material";
+import { Button, Rating, Typography } from "@mui/material";
 import React, { useState } from "react";
 import "./product.card.scss";
+import MessageDialog from "../message.dialog/message.dialog";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const ProductCard = () => {
-  const [value, setValue] = useState(2);
+  const [state, setState] = useState({
+    value: 2,
+    open: false,
+  });
+
+  const handleChange = (name, value) => {
+    setState({ ...state, [name]: value });
+  };
+  const handleClickOpen = () => {
+    setState({ ...state, open: true });
+  };
+
+  const handleClose = () => {
+    setState({ ...state, open: false });
+  };
   return (
     <div id="product-card" className="card-wrapper paper-root">
+      <MessageDialog
+        handleClickOpen={handleClickOpen}
+        handleClose={handleClose}
+        open={state.open}
+        header="PORCHAM SERVICES MANAGER"
+        message="We're really sorry that currently we are unable to place your
+        order from here, but you can place your order through our Facebook
+        or WhatsApp link."
+        redirect={true}
+      />
       <img
         className="image"
         src={`${process.env.PUBLIC_URL}/assets/images/kk.jpg`}
@@ -23,15 +49,22 @@ const ProductCard = () => {
           <Rating
             name="simple-controlled"
             size="small"
-            value={value}
-            onChange={(event, newValue) => {
-              setValue(newValue);
-            }}
+            value={state.value}
+            onChange={(e) => handleChange("value", e.target.value)}
           />
           <Typography variant="caption" className="ps-2">
-            5 reviews
+            {state.value} reviews
           </Typography>
         </div>
+        {/* <Button
+          variant="outlined"
+          size="small"
+          className="mt-2"
+          onClick={handleClickOpen}
+        >
+          Order Now
+          <AddShoppingCartIcon sx={{ fontSize: 20, marginLeft: 1 }} />
+        </Button> */}
       </div>
     </div>
   );
