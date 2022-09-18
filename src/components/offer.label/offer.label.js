@@ -7,10 +7,7 @@ import clsx from "clsx";
 const OfferLabel = () => {
   const mobileWidth = IsMobileWidth();
   return (
-    <div
-      id="offer-label"
-      className={clsx(!mobileWidth && "p-5", mobileWidth && "p-3")}
-    >
+    <div id="offer-label">
       <div className="label-img paper-root">
         <div
           className={clsx(

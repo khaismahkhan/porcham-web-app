@@ -6,22 +6,49 @@ import OfferLabel from "../../../components/offer.label/offer.label";
 import BestSeller from "../../../components/best.seller/best.seller";
 import InstagramFeed from "../../../components/instagram.feed/instagram.feed";
 import ProductCard from "../../../components/product.card/product.card";
+import SwiperCarousel from "../../../components/swiper.carousel/swiper.carousel";
+import { IsMobileWidth } from "../../../components/utils/utils";
+import clsx from "clsx";
 
 const Home = () => {
+  const mobileWidth = IsMobileWidth();
   const products = [4, 9, 16, 25, 1, 1, 1, 1, 1, 1, 1];
+  const comingItems = [
+    { name: "Coat Pant", image: "kk.jpg" },
+    { name: "Sherwani", image: "kk.jpg" },
+    { name: "Shirts", image: "kk.jpg" },
+    { name: "Prince Coat", image: "kk.jpg" },
+    { name: "Pants", image: "kk.jpg" },
+  ];
   return (
     <div className="w-100">
       <div className="">
         <AdvertismentPanelCarousel />
       </div>
-      <div>
+      <div className={clsx(!mobileWidth && "m-5", mobileWidth && "mt-5 ms-3 me-3")}>
         <OfferLabel />
       </div>
-      <div className="">
-        <Typography variant="h2" className="text-center font-weight-bold pt-5 pb-4">
+      <div className="mt-5 mb-5">
+        <Typography
+          variant="h2"
+          className="text-center font-weight-bolder text-theme pt-3 pb-4"
+          style={{ letterSpacing: 5 }}
+        >
+          COMING SOON
+        </Typography>
+        <div className="mt-5 mb-5">
+          <SwiperCarousel comingItems={comingItems} />
+        </div>
+      </div>
+      <div className="mt-5">
+        <Typography
+          variant="h2"
+          className="text-center font-weight-bolder text-theme pt-5"
+          style={{ letterSpacing: 5 }}
+        >
           BEST DEALS
         </Typography>
-        <div className="w-100 d-flex flex-wrap justify-content-center">
+        <div className="w-100 d-flex flex-wrap justify-content-center mt-5">
           {products.map((product, index) => (
             <div className="m-3" key={index}>
               <ProductCard />

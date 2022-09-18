@@ -35,6 +35,11 @@ const Header = (props) => {
   const handleClick = (event) => {
     // setAnchorEl(event.currentTarget);
     navigate("/coming-soon");
+    setAnchorElNav(null);
+  };
+  const handleNavigate = () => {
+    navigate("/");
+    setAnchorElNav(null);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -155,8 +160,11 @@ const Header = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
+              <MenuItem className="" onClick={handleNavigate}>
+                HOME
+              </MenuItem>
               {pages.map((page, index) => (
-                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                <MenuItem key={index} onClick={handleClick}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
