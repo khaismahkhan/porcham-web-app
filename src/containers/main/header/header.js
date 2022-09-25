@@ -15,7 +15,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.scss";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["SHOP", "BLOG", "CONTACT", "TOOLS"];
+const pages = ["SHOP", "CONTACT", "TOOLS"];
 
 const Header = (props) => {
   const navigate = useNavigate();

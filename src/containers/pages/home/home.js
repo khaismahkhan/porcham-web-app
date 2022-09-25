@@ -14,8 +14,8 @@ const Home = () => {
   const mobileWidth = IsMobileWidth();
   const products = [4, 9, 16, 25, 1, 1, 1, 1, 1, 1, 1];
   const comingItems = [
-    { name: "Coat Pant", image: "kk.jpg" },
-    { name: "Sherwani", image: "kk.jpg" },
+    { name: "Coat Pant", image: "coat.jpeg" },
+    { name: "Sherwani", image: "sherwani.jpeg" },
     { name: "Shirts", image: "kk.jpg" },
     { name: "Prince Coat", image: "kk.jpg" },
     { name: "Pants", image: "kk.jpg" },

@@ -56,7 +56,7 @@ const ProductCard = () => {
             {state.value} reviews
           </Typography>
         </div>
-        {/* <Button
+        <Button
           variant="outlined"
           size="small"
           className="mt-2"
@@ -64,7 +64,7 @@ const ProductCard = () => {
         >
           Order Now
           <AddShoppingCartIcon sx={{ fontSize: 20, marginLeft: 1 }} />
-        </Button> */}
+        </Button>
       </div>
     </div>
   );
