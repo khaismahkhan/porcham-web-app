@@ -9,6 +9,7 @@ import ProductCard from "../../../components/product.card/product.card";
 import SwiperCarousel from "../../../components/swiper.carousel/swiper.carousel";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import clsx from "clsx";
+import MainCarousel from "../../../components/main.carousel/main.carousel";
 
 const Home = () => {
   const mobileWidth = IsMobileWidth();
@@ -22,8 +23,8 @@ const Home = () => {
   ];
   return (
     <div className="w-100">
-      <div className="">
-        <AdvertismentPanelCarousel />
+      <div className="m-5">
+        <MainCarousel />
       </div>
       <div className={clsx(!mobileWidth && "m-5", mobileWidth && "mt-5 ms-3 me-3")}>
         <OfferLabel />

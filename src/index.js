@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 import 'swiper/css';
+import "swiper/css/pagination";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
