@@ -32,15 +32,16 @@ const AdvertismentPanelCarousel = () => {
           <div>
             <AdvertismentPanel
               image={`${process.env.PUBLIC_URL}/assets/images/1.jpg`}
-              titleHeading="Collection 1"
-              title="Custom Tailored Menswear"
+              titleHeading="Custom Tailored Menswear"
+              title="Pioneer of ZERO STITCH"
+              description="Our vision is to preserve all kinds of culture with ZERO STITCH of 'Kameez shalwar/ Kurta Pajama' with the best fabric"
             />
           </div>
           <div>
             <AdvertismentPanel
               image={`${process.env.PUBLIC_URL}/assets/images/2.jpg`}
-              titleHeading="Collection 2"
-              title="Made to measure"
+              titleHeading="Made to Measure"
+              title=""
               description="24 / 7 free delivery across Pakistan"
             />
           </div>
@@ -49,6 +50,7 @@ const AdvertismentPanelCarousel = () => {
               image={`${process.env.PUBLIC_URL}/assets/images/3.jpg`}
               titleHeading="Exclusive Cufflinks"
               title="Graceful & Elegant"
+              description="Porcham cufflinks may let you express your uniqueness."
             />
           </div>
         </Slider>

@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 
 const MainCarousel = () => {
   return (
-    <div className="">
+    <div id="main-carousel">
       <Swiper
         pagination={{
           dynamicBullets: true,
