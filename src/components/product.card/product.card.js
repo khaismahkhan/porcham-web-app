@@ -4,7 +4,8 @@ import "./product.card.scss";
 import MessageDialog from "../message.dialog/message.dialog";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+  const { name, price, desc } = props;
   const [state, setState] = useState({
     value: 2,
     open: false,
@@ -40,10 +41,15 @@ const ProductCard = () => {
 
       <div className="d-flex flex-column align-items-center justify-content-center card-content">
         <Typography variant="subtitle2" className="fw-light pb-1">
-          SPECIAL EDITION IRONMAN TEE
+          {name}
         </Typography>
+        {desc && (
+          <Typography variant="body2" className=" pb-1 txt-gray">
+            {desc}
+          </Typography>
+        )}
         <Typography variant="body1" className="fw-lighter pb-1">
-          Rs. 1,050.00
+          Rs. {price}
         </Typography>
         <div className="d-flex align-items-center">
           <Rating

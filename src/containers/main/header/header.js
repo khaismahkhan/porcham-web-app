@@ -45,7 +45,7 @@ const Header = (props) => {
     setAnchorEl(null);
   };
   return (
-    <div id="header" className="w-100 bg-dark">
+    <div id="header" className="w-100 bg-dark position-sticky top-0 header">
       <div className="whatsapp">
         <a href="https://wa.me/923142593164" target="_blank">
           <img

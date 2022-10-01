@@ -5,32 +5,47 @@ import ProductCard from "../product.card/product.card";
 import "./best.seller.carousel.scss";
 
 const BestSellerCarousel = (props) => {
-  const {  } = props;
+  const {} = props;
 
   const bestSellerItems = [
-    { name: "Coat Pant", image: "coat.jpeg" },
-    { name: "Sherwani", image: "sherwani.jpeg" },
-    { name: "Shirts", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-  ]
+    {
+      name: "Best Collection",
+      price: "3,800",
+      desc: "4 meter cloth with simple stitching ",
+    },
+    {
+      name: "Hot Collection",
+      price: "4,200",
+      desc: "4 meter cloth with simple stitching ",
+    },
+    {
+      name: "Exclusive Collection",
+      price: "5,000",
+      desc: "4 meter cloth with simple stitching ",
+    },
+    {
+      name: "Premium Collection",
+      price: "5,800",
+      desc: "4 meter cloth with simple stitching ",
+    },
+  ];
   const breakpoints = {
-    320: {
-      slidesPerView: 1.5,
+    320:{
+      slidesPerView:1
     },
-    400: {
-      slidesPerView: 2,
+    480:{
+      slidesPerView:1.5
     },
-    640: {
+    650:{
+      slidesPerView:2
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    1080: {
       slidesPerView: 3,
     },
-    868: {
-      slidesPerView: 4,
-    },
-    1024: {
+    1200: {
       slidesPerView: 4,
     },
   };
@@ -41,12 +56,11 @@ const BestSellerCarousel = (props) => {
         slidesPerView={5}
         spaceBetween={30}
         breakpoints={breakpoints}
-        
       >
         {bestSellerItems.map((item, index) => (
           <SwiperSlide className="" key={index}>
             <div className="m-3" key={index}>
-              <ProductCard />
+              <ProductCard {...item} />
             </div>
           </SwiperSlide>
         ))}

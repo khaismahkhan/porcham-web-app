@@ -5,32 +5,32 @@ import ProductCard from "../product.card/product.card";
 import "./cufflinks.carousel.scss";
 
 const CufflinksCarousel = (props) => {
-  const {  } = props;
+  const {} = props;
 
   const cufflinksItems = [
-    { name: "Coat Pant", image: "coat.jpeg" },
-    { name: "Sherwani", image: "sherwani.jpeg" },
-    { name: "Shirts", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-  ]
+    { name: "Exclusive Contrast Buttons", price: "350" },
+    { name: "Exclusive Four Part (tich) Buttons", price: "500" },
+    { name: "Normal Cufflinks", price: "1,000" },
+    { name: "Mid Quality Cufflinks", price: "2,000" },
+    { name: "High Quality Cufflinks", price: "3,000" },
+  ];
   const breakpoints = {
-    320: {
-      slidesPerView: 1.5,
+    320:{
+      slidesPerView:1
     },
-    400: {
-      slidesPerView: 2,
+    480:{
+      slidesPerView:1.5
     },
-    640: {
+    650:{
+      slidesPerView:2
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    1080: {
       slidesPerView: 3,
     },
-    868: {
-      slidesPerView: 4,
-    },
-    1024: {
+    1200: {
       slidesPerView: 4,
     },
   };
@@ -41,12 +41,11 @@ const CufflinksCarousel = (props) => {
         slidesPerView={5}
         spaceBetween={30}
         breakpoints={breakpoints}
-        
       >
         {cufflinksItems.map((item, index) => (
           <SwiperSlide className="" key={index}>
             <div className="m-3" key={index}>
-              <ProductCard />
+              <ProductCard {...item}/>
             </div>
           </SwiperSlide>
         ))}

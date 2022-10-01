@@ -79,6 +79,9 @@ html {
 .text-theme {
   color: #1c3664;
 }
+.bg-theme {
+  background: #1c3664 !important;
+}
 
 a:link {
   text-decoration: none;
@@ -284,4 +287,7 @@ a:hover {
 }
 %animation-transform-scale {
   transform: scale(1.2);
+}
+.txt-gray {
+  color: #6c757d !important;
 }
