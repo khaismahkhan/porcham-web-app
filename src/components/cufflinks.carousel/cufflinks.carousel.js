@@ -44,7 +44,7 @@ const CufflinksCarousel = (props) => {
       >
         {cufflinksItems.map((item, index) => (
           <SwiperSlide className="" key={index}>
-            <div className="m-3" key={index}>
+            <div className="m-3" >
               <ProductCard {...item}/>
             </div>
           </SwiperSlide>

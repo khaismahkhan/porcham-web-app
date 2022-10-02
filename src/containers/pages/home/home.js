@@ -24,7 +24,7 @@ const Home = () => {
   ];
   return (
     <div className="w-100">
-      <div className="m-5">
+      <div className={clsx(!mobileWidth && "m-5", mobileWidth && "m-2")}>
         <MainCarousel />
       </div>
       <div
