@@ -2,9 +2,9 @@ import React from "react";
 import "./main.carousel.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
-import { ListItemSecondaryAction, Typography } from "@mui/material";
+import {Typography } from "@mui/material";
 import clsx from "clsx";
-import { IsMobileWidth } from "../utils/utils";
+import { IsMobileWidth } from "../../utils/utils";
 
 const MainCarousel = () => {
   const mobileWidth = IsMobileWidth();
@@ -36,11 +36,11 @@ const MainCarousel = () => {
         className="mySwiper"
       >
         {carouselItems.map((item, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className="d-flex w-100 h-100">
               <div
                 className="w-60 d-flex align-items-start justify-content-center flex-column "
-                key={index}
+                
               >
                 <Typography
                   variant="h3Joined"

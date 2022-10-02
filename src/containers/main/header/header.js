@@ -119,7 +119,7 @@ const Header = (props) => {
         </div>
         <div className="w-100 d-flex justify-content-end">
           <IconButton aria-label="cart">
-            <Badge badgeContent={1} color="primary">
+            <Badge badgeContent={0} color="primary">
               <ShoppingCartIcon style={{ color: "white" }} />
             </Badge>
           </IconButton>
@@ -180,7 +180,7 @@ const Header = (props) => {
         </div>
         <div>
           <IconButton aria-label="cart">
-            <Badge badgeContent={1} color="primary">
+            <Badge badgeContent={0} color="primary">
               <ShoppingCartIcon style={{ color: "white" }} />
             </Badge>
           </IconButton>

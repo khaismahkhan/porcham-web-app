@@ -1,16 +1,16 @@
 import { Typography } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./swiper.carousel.scss";
+import "./coming.soon.carousel.scss";
 
-const SwiperCarousel = (props) => {
+const ComingSoonCarousel = (props) => {
   const { comingItems } = props;
   const breakpoints = {
     320: {
       slidesPerView: 1.5,
     },
     400: {
-      slidesPerView: 2,
+      slidesPerView: 1.8,
     },
     640: {
       slidesPerView: 3,
@@ -49,4 +49,4 @@ const SwiperCarousel = (props) => {
   );
 };
 
-export default SwiperCarousel;
+export default ComingSoonCarousel;

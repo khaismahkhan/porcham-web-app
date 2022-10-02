@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ProductCard from "../product.card/product.card";
+import ProductCard from "../../product.card/product.card";
 import "./best.seller.carousel.scss";
 
 const BestSellerCarousel = (props) => {
@@ -59,7 +59,7 @@ const BestSellerCarousel = (props) => {
       >
         {bestSellerItems.map((item, index) => (
           <SwiperSlide className="" key={index}>
-            <div className="m-3" key={index}>
+            <div className="d-flex justify-content-center m-3" key={index}>
               <ProductCard {...item} />
             </div>
           </SwiperSlide>

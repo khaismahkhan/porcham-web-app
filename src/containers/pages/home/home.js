@@ -1,17 +1,12 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { Button } from "../../../components/button/button";
-import AdvertismentPanelCarousel from "../../../components/advertisment.panel.carousel/advertisment.panel.carousel";
 import OfferLabel from "../../../components/offer.label/offer.label";
-import BestSeller from "../../../components/best.seller/best.seller";
-import InstagramFeed from "../../../components/instagram.feed/instagram.feed";
-import ProductCard from "../../../components/product.card/product.card";
-import SwiperCarousel from "../../../components/swiper.carousel/swiper.carousel";
+import ComingSoonCarousel from "../../../components/carousels/coming.soon.carousel/coming.soon.carousel";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import clsx from "clsx";
-import MainCarousel from "../../../components/main.carousel/main.carousel";
-import BestSellerCarousel from "../../../components/best.seller.carousel/best.seller.carousel";
-import CufflinksCarousel from "../../../components/cufflinks.carousel/cufflinks.carousel";
+import MainCarousel from "../../../components/carousels/main.carousel/main.carousel";
+import BestSellerCarousel from "../../../components/carousels/best.seller.carousel/best.seller.carousel";
+import CufflinksCarousel from "../../../components/carousels/cufflinks.carousel/cufflinks.carousel";
 
 const Home = () => {
   const mobileWidth = IsMobileWidth();
@@ -32,16 +27,16 @@ const Home = () => {
       >
         <OfferLabel />
       </div>
-      <div className="mt-5 mb-5">
+      <div className="mt-5 mb-5 mx-2">
         <Typography
-          variant="h2"
+          variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
           className="text-center font-weight-bolder text-theme pt-3 pb-4"
           style={{ letterSpacing: 5 }}
         >
           COMING SOON
         </Typography>
         <div className="mt-5 mb-5">
-          <SwiperCarousel comingItems={comingItems} />
+          <ComingSoonCarousel comingItems={comingItems} />
         </div>
       </div>
       <div
@@ -52,7 +47,7 @@ const Home = () => {
         )}
       >
         <Typography
-          variant="h2"
+          variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
           className="text-center font-weight-bolder text-theme pt-5"
           style={{ letterSpacing: 5 }}
         >
@@ -73,7 +68,7 @@ const Home = () => {
         )}
       >
         <Typography
-          variant="h2"
+          variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
           className="text-center font-weight-bolder text-theme pt-5"
           style={{ letterSpacing: 5 }}
         >
