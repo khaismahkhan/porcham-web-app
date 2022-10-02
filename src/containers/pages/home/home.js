@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
 import React from "react";
+import "./home.scss"
+import { Typography } from "@mui/material";
 import OfferLabel from "../../../components/offer.label/offer.label";
 import ComingSoonCarousel from "../../../components/carousels/coming.soon.carousel/coming.soon.carousel";
 import { IsMobileWidth } from "../../../components/utils/utils";
@@ -18,7 +19,7 @@ const Home = () => {
     { name: "Perfume", image: "kk.jpg" },
   ];
   return (
-    <div className="w-100">
+    <div className="w-100" id="home">
       <div className={clsx(!mobileWidth && "m-5", mobileWidth && "m-2")}>
         <MainCarousel />
       </div>
@@ -30,8 +31,8 @@ const Home = () => {
       <div className="mt-5 mb-5 mx-2">
         <Typography
           variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
-          className="text-center font-weight-bolder text-theme pt-3 pb-4"
-          style={{ letterSpacing: 5 }}
+          className="text-center font-weight-bolder text-theme pt-3 pb-4 main-heading"
+          
         >
           COMING SOON
         </Typography>
@@ -48,8 +49,7 @@ const Home = () => {
       >
         <Typography
           variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
-          className="text-center font-weight-bolder text-theme pt-5"
-          style={{ letterSpacing: 5 }}
+          className="text-center font-weight-bolder text-theme pt-5 main-heading"
         >
           Custom Tailored Menswear
         </Typography>
@@ -69,8 +69,7 @@ const Home = () => {
       >
         <Typography
           variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
-          className="text-center font-weight-bolder text-theme pt-5"
-          style={{ letterSpacing: 5 }}
+          className="text-center font-weight-bolder text-theme pt-5 main-heading"
         >
           Exclusive Cufflinks
         </Typography>

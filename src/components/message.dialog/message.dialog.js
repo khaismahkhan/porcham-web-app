@@ -17,7 +17,7 @@ export default function MessageDialog(props) {
   return (
     <div>
       <Dialog
-        fullScreen={fullScreen}
+        // fullScreen={fullScreen}
         open={open}
         onClose={props.handleClose}
         aria-labelledby="responsive-dialog-title"
@@ -29,11 +29,16 @@ export default function MessageDialog(props) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText className="text-theme">
-            <Typography variant="subtitle1">{message}</Typography>
+            <Typography variant="subtitle2">{message}</Typography>
           </DialogContentText>
         </DialogContent>
-        <DialogActions >
-          <Button autoFocus variant="outlined" onClick={props.handleClose}>
+        <DialogActions>
+          <Button
+            autoFocus
+            variant="outlined"
+            onClick={props.handleClose}
+            style={{ textTransform: "none" }}
+          >
             Cancel
           </Button>
           <Button
@@ -42,6 +47,7 @@ export default function MessageDialog(props) {
             autoFocus
             variant="contained"
             className={redirect ? "ms-2" : ""}
+            style={{ color: "white", textTransform: "none" }}
           >
             Order Here
           </Button>

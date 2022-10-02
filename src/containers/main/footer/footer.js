@@ -25,7 +25,14 @@ const Footer = () => {
           <Typography variant="h6" className="fw-bold">
             Porcham is 'Sign of culture',
           </Typography>
-          <Typography className="w-50 pb-2 pt-2 " variant="body1" style={{lineHeight:1.7}}>
+          <Typography
+            className={clsx(
+              !mobileWidth && "w-50 pb-2 pt-2",
+              mobileWidth && "w-100 pb-2 pt-2"
+            )}
+            variant="body1"
+            style={{ lineHeight: 1.7 }}
+          >
             Our vision is to preserve all kinds of culture with ZERO STITCH of
             'Kameez shalwar/ Kurta Pajama' with the best fabric.
           </Typography>
@@ -40,10 +47,18 @@ const Footer = () => {
           <Typography className="pb-2" variant="h6">
             Our Collections
           </Typography>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Best</Link>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Hot</Link>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Exclusive</Link>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Premium</Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Best
+          </Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Hot
+          </Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Exclusive
+          </Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Premium
+          </Link>
         </div>
         <div
           className={clsx(
@@ -55,10 +70,18 @@ const Footer = () => {
           <Typography className="pb-2" variant="h6">
             Information
           </Typography>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">About Us</Link>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Our Team</Link>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Our Vision</Link>
-          <Link className="pb-1 ps-1 cursor-pointer" underline="none">Privacy Policy</Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            About Us
+          </Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Our Team
+          </Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Our Vision
+          </Link>
+          <Link className="pb-1 ps-1 cursor-pointer" underline="none">
+            Privacy Policy
+          </Link>
         </div>
 
         <div

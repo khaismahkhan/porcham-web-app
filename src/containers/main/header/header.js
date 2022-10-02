@@ -49,18 +49,18 @@ const Header = (props) => {
       <div className="whatsapp">
         <a href="https://wa.me/923142593164" target="_blank">
           <img
-            style={{ height: "55px", width: "55px" }}
             src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
             alt="whatsapp-logo"
+            className="social-logo"
           />
         </a>
       </div>
       <div className="messenger">
         <a href="https://m.me/porchamstore" target="_blank">
           <img
-            style={{ height: "55px", width: "55px" }}
             src={`${process.env.PUBLIC_URL}/assets/images/messenger.png`}
             alt="messenger-logo"
+            className="social-logo"
           />
         </a>
       </div>

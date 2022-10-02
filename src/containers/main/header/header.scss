@@ -13,7 +13,17 @@
     cursor: pointer;
     z-index: 2;
   }
+  .social-logo {
+    height: 55px;
+    width: 55px;
+  }
+  @media screen and (max-width: 500px) {
+    .social-logo {
+      height: 40px;
+      width: 40px;
+    }
+  }
 }
-.header{
+.header {
   z-index: 10000;
 }

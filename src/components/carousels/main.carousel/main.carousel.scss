@@ -45,6 +45,9 @@
   .desc{
     font-size: 24px;
   }
+  .image{
+    object-fit: scale-down;
+  }
 
   @media screen and (max-width: 768px) {
     .swiper {
