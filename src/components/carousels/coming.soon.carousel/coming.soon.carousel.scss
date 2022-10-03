@@ -1,11 +1,15 @@
 #swiper-carousel {
-  .image {
-    height: 200px;
-    width: 200px;
+  .circle {
+    height: 220px;
+    width: 220px;
     border-radius: 100%;
     background-position: center;
-    background-size:100% 100%, contain;
-    background-origin: unset;
-    object-fit: cover;
+    // &:hover{
+    //   scale: 1.1;
+    // }
+  }
+  .txt {
+    font-size: 24px;
+    letter-spacing: 2px;
   }
 }

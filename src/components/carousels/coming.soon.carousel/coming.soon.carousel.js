@@ -4,7 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./coming.soon.carousel.scss";
 
 const ComingSoonCarousel = (props) => {
-  const { comingItems } = props;
+  const comingItems = [
+    { name: "COAT PANT", image: "coat.jpeg", bg: "#131313", color: "#bb8a30" },
+    { name: "SHERWANI", image: "sherwani.jpeg", bg: "#055bb8", color: "white" },
+    { name: "SHIRTS", image: "kk.jpg", bg: "#ebebeb", color: "#101010" },
+    { name: "PRINCE COAT", image: "kk.jpg", bg: "#fdc11e", color: "#101010" },
+    { name: "PERFUME", image: "kk.jpg", bg: "#d62196", color: "white" },
+  ];
   const breakpoints = {
     320: {
       slidesPerView: 1.5,
@@ -25,20 +31,22 @@ const ComingSoonCarousel = (props) => {
   return (
     <div id="swiper-carousel">
       <Swiper
-        className="mySwiper"
+        className="mySwiper py-3"
         slidesPerView={5}
-        spaceBetween={30}
+        spaceBetween={15}
         breakpoints={breakpoints}
       >
         {comingItems.map((item, index) => (
-          <SwiperSlide className="" key={index}>
-            <div className="d-flex flex-column align-items-center">
-              <img
-                className="image paper-root cursor-pointer"
-                src={`${process.env.PUBLIC_URL}/assets/images/${item.image}`}
-                alt="product-img"
-              />
-              <Typography variant="body1" className="fw-lighter pt-3">
+          <SwiperSlide className="d-flex justify-content-center" key={index}>
+            <div
+              className="d-flex justify-content-center align-items-center paper-root circle cursor-pointer"
+              style={{ background: item.bg }}
+            >
+              <Typography
+                variant="subtitle1"
+                className="fw-semibold pt-3 txt"
+                style={{ color: item.color }}
+              >
                 {item.name}
               </Typography>
             </div>

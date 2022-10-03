@@ -11,13 +11,7 @@ import CufflinksCarousel from "../../../components/carousels/cufflinks.carousel/
 
 const Home = () => {
   const mobileWidth = IsMobileWidth();
-  const comingItems = [
-    { name: "Coat Pant", image: "coat.jpeg" },
-    { name: "Sherwani", image: "sherwani.jpeg" },
-    { name: "Shirts", image: "kk.jpg" },
-    { name: "Prince Coat", image: "kk.jpg" },
-    { name: "Perfume", image: "kk.jpg" },
-  ];
+ 
   return (
     <div className="w-100" id="home">
       <div className={clsx(!mobileWidth && "m-5", mobileWidth && "m-2")}>
@@ -37,7 +31,7 @@ const Home = () => {
           COMING SOON
         </Typography>
         <div className="mt-5 mb-5">
-          <ComingSoonCarousel comingItems={comingItems} />
+          <ComingSoonCarousel/>
         </div>
       </div>
       <div

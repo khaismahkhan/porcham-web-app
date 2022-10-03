@@ -5,7 +5,7 @@ import MessageDialog from "../message.dialog/message.dialog";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const ProductCard = (props) => {
-  const { name, price, desc } = props;
+  const { name, price, desc, image } = props;
   const [state, setState] = useState({
     value: 2,
     open: false,
@@ -35,7 +35,9 @@ const ProductCard = (props) => {
       />
       <img
         className="image"
-        src={`${process.env.PUBLIC_URL}/assets/images/kk.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/images/${
+          image ? image : "kk.jpg"
+        }`}
         alt="product-img"
       />
 

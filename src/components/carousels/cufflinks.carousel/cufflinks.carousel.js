@@ -8,11 +8,11 @@ const CufflinksCarousel = (props) => {
   const {} = props;
 
   const cufflinksItems = [
-    { name: "Exclusive Contrast Buttons", price: "350" },
-    { name: "Exclusive Four Part (tich) Buttons", price: "500" },
-    { name: "Normal Cufflinks", price: "1,000" },
-    { name: "Mid Quality Cufflinks", price: "2,000" },
-    { name: "High Quality Cufflinks", price: "3,000" },
+    { name: "Exclusive Contrast Buttons", price: "350", image:'hq-cuff.jpg' },
+    { name: "Exclusive Four Part (tich) Buttons", price: "500", image:'hq-cuff.jpg' },
+    { name: "Normal Cufflinks", price: "1,000", image:'hq-cuff.jpg' },
+    { name: "Mid Quality Cufflinks", price: "2,000", image:'hq-cuff.jpg' },
+    { name: "High Quality Cufflinks", price: "3,000", image:'hq-cuff.jpg' },
   ];
   const breakpoints = {
     320:{
