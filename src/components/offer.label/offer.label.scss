@@ -1,6 +1,6 @@
 #offer-label{
     .label-img{
-        background-image: url(../../../public/assets//images/25.jpg);
+        background-image: url(../../../public/assets//images/label.png);
         background-size: 100% 100%, contain;
         background-position: center;
         background-origin:content-box;
@@ -8,7 +8,7 @@
         height: 280px;
         display: flex;
         align-items: center;
-        
+        width: 95vw;
     }
     @media screen and (max-width: 760px) {
         .label-img{

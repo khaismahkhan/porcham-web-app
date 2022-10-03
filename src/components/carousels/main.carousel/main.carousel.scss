@@ -1,6 +1,6 @@
 #main-carousel {
   .swiper {
-    width: 80vw;
+    width: 95vw;
     height: 60vh;
     box-shadow: 0px 3px 12px #c8cfde99 !important;
   }
@@ -34,6 +34,13 @@
   .main-carousel {
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%) !important;
     // border-left: 2px solid black !important;
+  }
+  .image{
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%, cover;
+    background-position: center;
+    object-fit: cover;
   }
   .title-heading{
     font-size: 52px;
