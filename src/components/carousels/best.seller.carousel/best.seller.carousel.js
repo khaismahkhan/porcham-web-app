@@ -12,7 +12,7 @@ const BestSellerCarousel = (props) => {
       name: "Best Collection",
       price: "3,800",
       desc: "4 meter cloth with simple stitching ",
-      image: "exc.jpg",
+      image: "2.jpg",
     },
     {
       name: "Hot Collection",
@@ -24,7 +24,7 @@ const BestSellerCarousel = (props) => {
       name: "Exclusive Collection",
       price: "5,000",
       desc: "4 meter cloth with simple stitching ",
-      image: "exc.jpg",
+      image: "4.jpg",
     },
     {
       name: "Premium Collection",
