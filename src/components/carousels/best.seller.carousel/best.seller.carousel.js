@@ -12,25 +12,25 @@ const BestSellerCarousel = (props) => {
       name: "Best Collection",
       price: "3,800",
       desc: "4 meter cloth with simple stitching ",
-      image: "2.jpg",
+      image: "best.jpg",
     },
     {
       name: "Hot Collection",
       price: "4,200",
       desc: "4 meter cloth with simple stitching ",
-      image: "exc.jpg",
+      image: "66.jpg",
     },
     {
       name: "Exclusive Collection",
       price: "5,000",
       desc: "4 meter cloth with simple stitching ",
-      image: "4.jpg",
+      image: "excc.jpg",
     },
     {
       name: "Premium Collection",
       price: "5,800",
       desc: "4 meter cloth with simple stitching ",
-      image: "exc.jpg",
+      image: "99.jpg",
     },
   ];
   const breakpoints = {

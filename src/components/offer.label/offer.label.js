@@ -27,7 +27,12 @@ const OfferLabel = () => {
           >
             Up to 15% discount on your first purchase!
           </Typography>
-          <Button variant="outlined" className="mt-2">
+          <Button
+            href="https://wa.me/923142593164"
+            variant="outlined"
+            className="mt-2"
+            target="_blank"
+          >
             Order Now
           </Button>
         </div>
