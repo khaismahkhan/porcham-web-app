@@ -26,7 +26,7 @@ export const materialThemeBase = {
     },
     h5: {
       fontFamily: "Comfortaa",
-      fontSize: 32,
+      fontSize: 30,
     },
     h6: {
       fontFamily: "Ebrima-Bold",

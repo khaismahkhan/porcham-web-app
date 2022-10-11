@@ -30,6 +30,23 @@
   margin: 0;
 }
 
+//swiper carousel
+:root {
+  --swiper-navigation-size: 40px !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #1c3664 !important;
+  // box-shadow: 0px 3px 12px #c8cfde99 !important;
+  // background: yellow;
+  // height: 500px;
+  // width: 500px;
+  // border-radius: 100%;
+  // padding: 10px;
+}
+
+//scroll bar
+
 div::-webkit-scrollbar {
   width: 7px;
   height: 7px;
@@ -75,6 +92,8 @@ html {
   scrollbar-width: 7px;
   scrollbar-shadow-color: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
+//global
 
 .text-theme {
   color: #1c3664;

@@ -15,4 +15,9 @@
             height: 160px;
         }
     }
+    @media screen and (max-width: 500px) {
+        .label-img{
+            height: 180px;
+        }
+    }
 }

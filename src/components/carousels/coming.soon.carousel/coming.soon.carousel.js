@@ -13,7 +13,7 @@ const ComingSoonCarousel = (props) => {
   ];
   const breakpoints = {
     320: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.6,
     },
     400: {
       slidesPerView: 1.8,
@@ -33,7 +33,7 @@ const ComingSoonCarousel = (props) => {
       <Swiper
         className="mySwiper py-3"
         slidesPerView={5}
-        spaceBetween={15}
+        spaceBetween={10}
         breakpoints={breakpoints}
       >
         {comingItems.map((item, index) => (

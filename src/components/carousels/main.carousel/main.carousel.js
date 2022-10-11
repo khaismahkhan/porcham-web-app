@@ -19,7 +19,7 @@ const MainCarousel = () => {
       titleHeading: "Made to Measure",
       title: "Stitch your dream outfits",
       image: "made.jpg",
-      desc: "With our new improved Stitching quality we aim to improve sustainability, environmental protection and fair treatment of our customers across the globe.",
+      desc: "With our new improved Stitching quality, we aim to improve sustainability, environmental protection and fair treatment of our customers across the globe.",
     },
     {
       titleHeading: "Exclusive Cufflinks",
