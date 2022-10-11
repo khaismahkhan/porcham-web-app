@@ -12,7 +12,7 @@ const OfferLabel = () => {
         <div
           className={clsx(
             !mobileWidth && "w-100 ms-5",
-            mobileWidth && "ms-3 w-60"
+            mobileWidth && "ms-3 w-70"
           )}
         >
           <Typography
