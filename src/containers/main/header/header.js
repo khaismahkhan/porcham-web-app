@@ -15,7 +15,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import "./header.scss";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["SHOP", "CONTACT", "TOOLS"];
+const pages = ["SHOP", "TOOLS"];
 
 const Header = (props) => {
   const navigate = useNavigate();
@@ -37,8 +37,8 @@ const Header = (props) => {
     navigate("/coming-soon");
     setAnchorElNav(null);
   };
-  const handleNavigate = () => {
-    navigate("/");
+  const handleNavigate = (route) => {
+    navigate(route);
     setAnchorElNav(null);
   };
   const handleClose = () => {
@@ -76,6 +76,12 @@ const Header = (props) => {
           <div className="d-flex">
             <Button className="text-white" onClick={() => navigate("/")}>
               HOME
+            </Button>
+            <Button
+              className="text-white"
+              onClick={() => navigate("/contact-us")}
+            >
+              Contact
             </Button>
             {pages.map((page, index) => (
               <Button
@@ -160,8 +166,14 @@ const Header = (props) => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
             >
-              <MenuItem className="" onClick={handleNavigate}>
+              <MenuItem className="" onClick={() => handleNavigate("/")}>
                 HOME
+              </MenuItem>
+              <MenuItem
+                className=""
+                onClick={() => handleNavigate("/contact-us")}
+              >
+                Contact
               </MenuItem>
               {pages.map((page, index) => (
                 <MenuItem key={index} onClick={handleClick}>

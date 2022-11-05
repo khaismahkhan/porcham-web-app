@@ -108,6 +108,14 @@ a:link {
 a:hover {
   text-decoration: solid;
 }
+.link2{
+  text-decoration: underline !important;
+  color: #1c3664;
+}
+.link2:hover{
+  text-decoration: none !important;
+  color: #1c3664;
+}
 .vertical-line {
   border: 1px solid black;
   background: black;

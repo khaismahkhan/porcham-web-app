@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material";
 import { porchamTheme } from "../../containers/main/material.theme/porcham.theme/porcham.material.theme";
 import Footer from "../main/footer/footer";
 import ComingSoon from "../pages/coming.soon/coming.soon";
+import ContactUs from "../pages/contact.us/contact.us";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div style={{ minHeight: "100vh" }}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </div>

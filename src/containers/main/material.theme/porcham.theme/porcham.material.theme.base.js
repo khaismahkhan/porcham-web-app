@@ -8,6 +8,9 @@ export const materialThemeBase = {
   typography: {
     // fontFamily: "Comfortaa",
     // fontFamily: ["Comfortaa"].join(","),
+    h1:{
+      fontFamily: "Comfortaa",
+    },
     h2: {
       fontFamily: "Comfortaa",
       fontSize: 36,
