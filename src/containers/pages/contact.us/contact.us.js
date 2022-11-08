@@ -1,5 +1,6 @@
-import { Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { Input, Typography } from "@mui/material";
 import "./contact.us.scss";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import clsx from "clsx";
@@ -7,6 +8,29 @@ import clsx from "clsx";
 const ContactUs = (props) => {
   const {} = props;
   const mobileWidth = IsMobileWidth();
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ex5nwbk",
+        "template_uh41u2i",
+        form.current,
+        "HN3HV0IfMBnIN2zjS"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       id="contact-us"
@@ -43,7 +67,7 @@ const ContactUs = (props) => {
         </div>
         <div
           className={clsx(
-            "touchImage",
+            "connectImage",
             !mobileWidth && "w-50",
             mobileWidth && "w-100"
           )}
@@ -57,7 +81,7 @@ const ContactUs = (props) => {
       >
         <div
           className={clsx(
-            "touchImage",
+            "appointmentImage",
             !mobileWidth && "w-50",
             mobileWidth && "w-100"
           )}
@@ -117,6 +141,12 @@ const ContactUs = (props) => {
           </div>
         </div>
       </div>
+      {/* <div>
+        <form ref={form} onSubmit={sendEmail}>
+          <Input placeholder="Placeholder" value="hello khaismah" name="message"/>
+          <input type="submit" value="Send" />
+        </form>
+      </div> */}
     </div>
   );
 };

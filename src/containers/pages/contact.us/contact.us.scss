@@ -1,21 +1,27 @@
 #contact-us {
-  .touchImage {
-    background-image: url(../../../../public//assets/images/woman.webp);
+  .connectImage {
+    background-image: url(../../../../public//assets/images/connect.jpg);
+    height: 800px;
+    width: 100%;
+    background-size: 100% 100%, contain;
+    background-position: center;
+  }
+  .appointmentImage {
+    background-image: url(../../../../public//assets/images/appointment.avif);
     height: 800px;
     width: 100%;
     background-size: 100% 100%, contain;
     background-position: center;
   }
   @media screen and (max-width: 760px) {
-    .touchImage {
-      background-image: url(../../../../public//assets/images/woman.webp);
+    .connectImage {
       height: 300px;
-      width: 100%;
-      background-size: 100% 100%, contain;
-      background-position: center;
     }
-    .mb-padding{
-        height: 30vh;
+    .appointmentImage {
+      height: 300px;
+    }
+    .mb-padding {
+      height: 30vh;
     }
   }
 }
