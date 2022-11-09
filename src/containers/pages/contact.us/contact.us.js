@@ -4,6 +4,7 @@ import { Input, Typography } from "@mui/material";
 import "./contact.us.scss";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import clsx from "clsx";
+import SiteLabelTextField from '../../../components/site.label.textfield/site.label.textfield'
 
 const ContactUs = (props) => {
   const {} = props;
@@ -141,12 +142,22 @@ const ContactUs = (props) => {
           </div>
         </div>
       </div>
-      {/* <div>
-        <form ref={form} onSubmit={sendEmail}>
+      <div>
+        <SiteLabelTextField
+         
+         
+          onChange={(event) =>
+            props.handleChange("description", event.target.value)
+          }
+          // value={description}
+          topAdornment="Description"
+          placeholder="Type description"
+        />
+        {/* <form ref={form} onSubmit={sendEmail}>
           <Input placeholder="Placeholder" value="hello khaismah" name="message"/>
           <input type="submit" value="Send" />
-        </form>
-      </div> */}
+        </form> */}
+      </div>
     </div>
   );
 };

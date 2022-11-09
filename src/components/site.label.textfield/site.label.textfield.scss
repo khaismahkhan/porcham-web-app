@@ -1,0 +1,13 @@
+#site-label-text-field {
+  .MuiOutlinedInput-adornedStart {
+    padding-left: 0px !important;
+  }
+  .MuiOutlinedInput-root {
+    min-height: 50px;
+    border-radius: 10px !important;  
+    background: #F5F7F9 !important;
+  }
+  .MuiInputAdornment-positionEnd {
+    max-width: 80%;
+  }
+}
