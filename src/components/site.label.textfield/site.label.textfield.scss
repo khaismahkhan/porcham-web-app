@@ -4,10 +4,15 @@
   }
   .MuiOutlinedInput-root {
     min-height: 50px;
-    border-radius: 10px !important;  
-    background: #F5F7F9 !important;
+    border-radius: 10px !important;
+    background: #f5f7f9 !important;
+    border: 1px solid rgba(0, 0, 0, 0.23);
   }
   .MuiInputAdornment-positionEnd {
     max-width: 80%;
+  }
+  //for top border
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border: none !important;
   }
 }

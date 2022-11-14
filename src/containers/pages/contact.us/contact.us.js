@@ -1,20 +1,41 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Input, Typography } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  Input,
+  OutlinedInput,
+  TextareaAutosize,
+  Typography,
+} from "@mui/material";
 import "./contact.us.scss";
 import { IsMobileWidth } from "../../../components/utils/utils";
 import clsx from "clsx";
-import SiteLabelTextField from '../../../components/site.label.textfield/site.label.textfield'
+import SiteLabelTextField from "../../../components/site.label.textfield/site.label.textfield";
+import InputField from "../../../components/input.field/input.field";
+import LoaderButton from "../../../components/loader.button/loader.button";
 
 const ContactUs = (props) => {
   const {} = props;
   const mobileWidth = IsMobileWidth();
 
+  const [state, setState] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+    isLoading: "",
+  });
+
+  const handleChange = (name, value) => {
+    setState({ ...state, [name]: value });
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
+    setState({ ...state, isLoading: true });
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_ex5nwbk",
@@ -24,7 +45,14 @@ const ContactUs = (props) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(state);
+          setState({
+            firstName: "",
+            lastName: "",
+            email: "",
+            message: "",
+            isLoading: false,
+          });
         },
         (error) => {
           console.log(error.text);
@@ -142,17 +170,85 @@ const ContactUs = (props) => {
           </div>
         </div>
       </div>
-      <div>
-        <SiteLabelTextField
-         
-         
-          onChange={(event) =>
-            props.handleChange("description", event.target.value)
-          }
-          // value={description}
-          topAdornment="Description"
-          placeholder="Type description"
-        />
+      <div className="py-5 w-100">
+        <form
+          className="w-100 justify-content-center"
+          ref={form}
+          onSubmit={sendEmail}
+        >
+          <div className="w-100 d-flex justify-content-center">
+            <div
+              className={clsx(
+                "d-flex justify-content-center flex-wrap",
+                !mobileWidth && "w-70",
+                mobileWidth && "w-100"
+              )}
+            >
+              <div
+                className={clsx(
+                  !mobileWidth && "w-50 p-3",
+                  mobileWidth && "w-100 p-3"
+                )}
+              >
+                <InputField
+                  topAdornment="Enter Your Name"
+                  placeholder="First Name"
+                  value={state.firstName}
+                  onChange={(e) => handleChange("firstName", e.target.value)}
+                  name="c_name"
+                />
+              </div>
+              <div
+                className={clsx(
+                  !mobileWidth && "w-50 p-3",
+                  mobileWidth && "w-100 p-3"
+                )}
+              >
+                <InputField
+                  topAdornment="Enter Your Last Name"
+                  placeholder="Last Name"
+                  value={state.lastName}
+                  onChange={(e) => handleChange("lastName", e.target.value)}
+                />
+              </div>
+              <div className="w-100 p-3">
+                <InputField
+                  topAdornment="Enter Your Email Address"
+                  placeholder="Email Address"
+                  value={state.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  name="reply_to"
+                />
+              </div>
+              <div className="w-100 p-3">
+                <TextareaAutosize
+                  aria-label="minimum height"
+                  minRows={3}
+                  placeholder="Type your message ..."
+                  className="w-100 paper-root p-3"
+                  value={state.message}
+                  onChange={(e) => handleChange("message", e.target.value)}
+                  name="message"
+                />
+              </div>
+              <div
+                className={clsx(!mobileWidth && "w-30", mobileWidth && "w-100 mx-3")}
+              >
+                <LoaderButton
+                  variant="contained"
+                  // className="w-50 m-3"
+                  color="secondary"
+                  type="submit"
+                  onClick={sendEmail}
+                  loading={state.isLoading}
+                >
+                  Send a Message
+                </LoaderButton>
+              </div>
+            </div>
+          </div>
+        </form>
+
         {/* <form ref={form} onSubmit={sendEmail}>
           <Input placeholder="Placeholder" value="hello khaismah" name="message"/>
           <input type="submit" value="Send" />

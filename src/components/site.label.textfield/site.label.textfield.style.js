@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles'
 export const useStyles = makeStyles((theme) => ({
   textColor: {
-    color: 'red'
+    color: 'black',
   },
   nooutline: {
     outline: 'none',
@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
     border: 'none',
   },
   iconColor: {
-    color: 'blue',
+    color: 'black',
   },
   endAdn : {
      paddingRight : '3.5px',
@@ -47,7 +47,7 @@ export const useStyles = makeStyles((theme) => ({
     position: "relative",
     boxShadow: 'none',
     outline: 'none',
-    background: 'yellow',
+    background: 'black',
     display: 'flex',
     alignItems: 'center',
   }

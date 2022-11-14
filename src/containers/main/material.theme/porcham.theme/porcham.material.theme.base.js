@@ -10,6 +10,7 @@ export const materialThemeBase = {
     // fontFamily: ["Comfortaa"].join(","),
     h1:{
       fontFamily: "Comfortaa",
+      fontSize: 78,
     },
     h2: {
       fontFamily: "Comfortaa",
