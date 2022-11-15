@@ -170,7 +170,19 @@ const ContactUs = (props) => {
           </div>
         </div>
       </div>
-      <div className="py-5 w-100">
+      <div className="py-5 w-100 d-flex flex-column">
+        <Typography
+          variant={clsx(!mobileWidth && "h2", mobileWidth && "h5")}
+          className="text-center font-weight-bolder text-theme pt-5 main-heading"
+        >
+          For Any Queries
+        </Typography>
+        <Typography
+          variant="caption"
+          className="text-center txt-gray pt-2 pb-5"
+        >
+          Feel free to contact us ...
+        </Typography>
         <form
           className="w-100 justify-content-center"
           ref={form}
@@ -232,7 +244,10 @@ const ContactUs = (props) => {
                 />
               </div>
               <div
-                className={clsx(!mobileWidth && "w-30", mobileWidth && "w-100 mx-3")}
+                className={clsx(
+                  !mobileWidth && "w-30",
+                  mobileWidth && "w-100 mx-3"
+                )}
               >
                 <LoaderButton
                   variant="contained"
